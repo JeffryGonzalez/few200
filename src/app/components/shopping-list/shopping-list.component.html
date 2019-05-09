@@ -1,0 +1,20 @@
+<header class="page-header">
+  <h3>Your Shopping List</h3>
+</header>
+<div class="row">
+  <div class="col">
+    <app-entry (itemAdded)="onItemAdded($event)"></app-entry>
+  </div>
+  <div class="col">
+    <app-list heading='Stuff you Should Buy'
+              [shoppingItems]="items$ | async"></app-list>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <app-left></app-left>
+  </div>
+  <div class="col">
+    <app-right></app-right>
+  </div>
+</div>
